@@ -17,7 +17,7 @@ import javax.swing.JPanel;
  */
 public class ExBorderLayout {
        public void amosarVentana(){
-        JFrame marco=new JFrame("***LAYOUTS***");
+        JFrame marco=new JFrame("***BORDERLAYOUT***");
         marco.setSize(400,400);
         marco.setVisible(true);
         JPanel panel=new JPanel();
@@ -27,7 +27,7 @@ public class ExBorderLayout {
         JButton bot4=new JButton("boton 3");
         JButton bot5=new JButton("boton 3");
 
-         panel.setLayout(new FlowLayout(FlowLayout.RIGHT,10,15));//sustitue as lineas comentadas arriba
+         panel.setLayout(new FlowLayout(FlowLayout.RIGHT,10,15));
          
          panel.setLayout(new BorderLayout());
          panel.add(bot1, BorderLayout.NORTH);

@@ -5,7 +5,7 @@
  */
 package exemplolayout;
 
-import java.awt.GridLayout;
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -14,9 +14,9 @@ import javax.swing.JPanel;
  *
  * @author agarridogarcia
  */
-public class ExGridLayout {
+public class ExBoxLayout {
      public void amosarVentana(){
-        JFrame marco=new JFrame("***GRIDLAYOUTS***");
+        JFrame marco=new JFrame("***BOXLAYOUTS***");
         marco.setSize(400,400);
         marco.setVisible(true);
         JPanel panel=new JPanel();
@@ -26,8 +26,9 @@ public class ExGridLayout {
         JButton bot4=new JButton("boton 4");
         JButton bot5=new JButton("boton 5");
         
-        panel.setLayout(new GridLayout(2,3));
-        panel.add(bot1);
+        //panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+         panel.add(bot1);
         panel.add(bot2);
         panel.add(bot3);
         panel.add(bot4);
@@ -35,5 +36,8 @@ public class ExGridLayout {
         
         marco.add(panel);
          marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+         
+         marco.setVisible(true);
+     
      }
 }
